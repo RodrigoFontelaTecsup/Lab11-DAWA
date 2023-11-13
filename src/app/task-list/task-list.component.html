@@ -1,0 +1,11 @@
+<ul class="space-y-2">
+  <li *ngFor="let task of tasks" class="flex items-center space-x-2">
+    <input
+      type="checkbox"
+      [checked]="task.completed"
+      (change)="updateTaskStatus(task)"
+      class="form-checkbox text-blue-500 border border-gray-300 rounded"
+    />
+    <span class="text-gray-800">{{ task.name }}</span>
+  </li>
+</ul>

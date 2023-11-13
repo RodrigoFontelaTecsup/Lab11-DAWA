@@ -1,0 +1,17 @@
+<div class="flex items-center space-x-2">
+  <label for="filter" class="text-gray-600">Filtrar tareas:</label>
+  <select
+    id="filter"
+    [(ngModel)]="selectedFilter"
+    (change)="changeFilter(selectedFilter)"
+    class="bg-white border border-gray-300 rounded-md p-2"
+  >
+    <option
+      *ngFor="let option of filterOptions"
+      [value]="option"
+      class="text-gray-800"
+    >
+      {{ option }}
+    </option>
+  </select>
+</div>
